@@ -3,18 +3,20 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
+import useAuth from "@/hooks/useAuth";
+import { useSelector } from "react-redux";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
 }
 
 const Navbar = () => {
-//   const { currentUser,logOut } = useAuthContext();
+  const { logOut } = useAuth();
+  const { currentUser } = useSelector((state) => state.auth);
   const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      // console.log(window.scrollY);
       const TOP_OFFSET = 60;
       if (window.scrollY >= TOP_OFFSET) {
         setShowBackground(true);
@@ -31,9 +33,6 @@ const Navbar = () => {
   }, []);
 
   //* with custom hook
-  // const { currentUser } = useAuthContext();
-  //   const currentUser = { displayName: "felix franko" };
-  // const currentUser = false;
 
   return (
     <>
@@ -48,9 +47,9 @@ const Navbar = () => {
               <img src="/images/logo.png" className="h-4 lg:h-7" alt="Logo" />
             </Link>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              {/* {currentUser && (
+              {currentUser && (
                 <h5 className="mr-2 capitalize">{currentUser?.displayName}</h5>
-              )} */}
+              )}
 
               {/* Profile dropdown */}
               <Menu as="div" className="relative">
@@ -59,7 +58,7 @@ const Navbar = () => {
                     <span className="sr-only">Open user menu</span>
                     <img
                       className="h-8 w-8 rounded-full"
-                      src="/images/default-slate.png"
+                      src={currentUser?.photoURL || "/images/default-slate.png"}
                       alt="user"
                       loading="lazy"
                       referrerPolicy="no-referrer"

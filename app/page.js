@@ -1,8 +1,17 @@
 "use client";
+
+import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 
 export default function Home() {
-  const router = useRouter();
+  const { currentUser } = useSelector((state) => state.auth);
+  let router = useRouter();
+  useEffect(() => {
+    currentUser && router.push("/profile");
+  }, [currentUser]);
+
   return (
     <div className="relative h-screen w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
       <div className="bg-black w-full h-full bg-opacity-50">
@@ -10,13 +19,18 @@ export default function Home() {
           <h1 className="text-5xl font-[900] text-center mb-3">
             Unlimited movies, TV shows, and more
           </h1>
-          <p className="text-2xl font-[400]">Watch anywhere. Cancel anytime.</p>
-          <button
-            className="btn-danger w-[250px] "
-            onClick={() => router.push("/register")}
-          >
-            Get Started
-          </button>
+          <p className="text-2xl font-[400] ">
+            Watch anywhere. Cancel anytime.
+          </p>
+        
+          <Link href="/register">
+            <button
+              className="btn-danger w-[250px]"
+              // onClick={() => router.push("/register")}
+            >
+              Get Started
+            </button>
+          </Link>
         </div>
       </div>
     </div>
