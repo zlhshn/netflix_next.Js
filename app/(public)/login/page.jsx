@@ -1,11 +1,12 @@
 "use client";
 
+import useAuth from "@/hooks/useAuth";
 import GoogleIcon from "@/public/icons/GoogleIcon";
 import Link from "next/link";
 import React, { useState } from "react";
 
 const Login = () => {
-//   const { signIn, forgotPassword, signUpProvider } = useAuthContext();
+  const { signIn, forgotPassword, signUpProvider } = useAuth();
   const [info, setInfo] = useState({
     email: "",
     password: "",
@@ -17,7 +18,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     const { email, password } = info;
     e.preventDefault();
-    // signIn(email, password);
+    signIn(email, password);
   };
 
   return (
@@ -54,7 +55,7 @@ const Login = () => {
               <div className="flex justify-between">
                 <span
                   className="py-3 font-[0.75em] cursor-pointer decoration-none text-gray-500 hover:text-[#ff4b45]"
-                //   onClick={() => forgotPassword(email)}
+                  onClick={() => forgotPassword(email)}
                 >
                   Forgot Password
                 </span>
@@ -71,7 +72,7 @@ const Login = () => {
               <button
                 className="flex justify-between text-center items-center btn-danger"
                 type="button"
-                // onClick={signUpProvider}
+                onClick={signUpProvider}
               >
                 Continue with Google
                 <GoogleIcon color="currentColor" />

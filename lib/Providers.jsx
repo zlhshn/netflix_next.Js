@@ -2,8 +2,8 @@
 import { Provider } from "react-redux";
 import store from "./store";
 
-export const Providers = ({children}) => {
-  return <Provider store={store}>{children}</Provider>
+export const Providers = (props) => {
+  return <Provider store={store}>{props.children}</Provider>
 }
 
 export default Providers

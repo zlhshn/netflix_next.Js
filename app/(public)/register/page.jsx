@@ -1,10 +1,12 @@
 "use client";
 
+import useAuth from "@/hooks/useAuth";
 import GoogleIcon from "@/public/icons/GoogleIcon";
 import React, { useState } from "react";
 
 const Register = () => {
-//   const { createUser, signUpProvider } = useAuthContext();
+ const {createUser,signUpProvider} = useAuth()
+
   const [info, setInfo] = useState({
     firstName: "",
     lastName: "",
@@ -19,7 +21,7 @@ const Register = () => {
     const { email, password, firstName, lastName } = info;
     const displayName = `${firstName} ${lastName}`;
     e.preventDefault();
-    // createUser(email, password, displayName);
+    createUser(email, password, displayName);
   };
 
   return (
@@ -81,7 +83,7 @@ const Register = () => {
               <button
                 className="flex justify-between text-center items-center btn-danger"
                 type="button"
-                // onClick={signUpProvider}
+                onClick={()=>signUpProvider}
               >
                 Continue with Google
                 <GoogleIcon color="currentColor" />

@@ -32,7 +32,7 @@ const Navbar = () => {
     };
   }, []);
 
-  //* with custom hook
+
 
   return (
     <>

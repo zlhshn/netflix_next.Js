@@ -1,9 +1,4 @@
 "use client";
-
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import { auth } from "@/auth/firebase";
-import { useDispatch } from "react-redux";
 import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
@@ -14,15 +9,20 @@ import {
   signOut,
   updateProfile,
 } from "firebase/auth";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { auth } from "@/auth/firebase";
 import {
   toastErrorNotify,
   toastSuccessNotify,
   toastWarnNotify,
 } from "@/helpers/ToastNotify";
+import { useDispatch } from "react-redux";
+import { loginSuccess, logoutSuccess } from "@/lib/features/authSlice";
 
 const useAuth = () => {
   const dispatch = useDispatch();
-  let router = useRouter;
+  let router = useRouter();
 
   useEffect(() => {
     userObserver();
@@ -30,25 +30,40 @@ const useAuth = () => {
 
   const createUser = async (email, password, displayName) => {
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      await updateProfile(auth.createUser, {
+      //? yeni bir kullanıcı oluşturmak için kullanılan firebase metodu
+      let userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      //? kullanıcı profilini güncellemek için kullanılan firebase metodu
+      await updateProfile(auth.currentUser, {
         displayName: displayName,
       });
       router.push("/profile");
       toastSuccessNotify("Registered successfully!");
-    } catch (error) {
-      toastErrorNotify(error.message);
+      console.log(userCredential);
+    } catch (err) {
+      toastErrorNotify(err.message);
+      // alert(err.message);
     }
   };
 
+ 
   const signIn = async (email, password) => {
     try {
-      await signInWithEmailAndPassword(auth, email, password);
+     await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       userObserver();
       router.push("/profile");
       toastSuccessNotify("Logged in successfully!");
+  
     } catch (err) {
       toastErrorNotify(err.message);
+    
     }
   };
 
@@ -58,6 +73,7 @@ const useAuth = () => {
   };
 
   const userObserver = () => {
+    //? Kullanıcının signin olup olmadığını takip eden ve kullanıcı değiştiğinde yeni kullanıcıyı response olarak dönen firebase metodu
     onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
         const { email, displayName, photoURL } = currentUser;
@@ -77,6 +93,7 @@ const useAuth = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
+        console.log(result);
         router.push("/profile");
         toastSuccessNotify("Logged in successfully!");
       })
@@ -84,6 +101,7 @@ const useAuth = () => {
         console.log(error);
       });
   };
+
   const forgotPassword = (email) => {
     sendPasswordResetEmail(auth, email)
       .then(() => {
