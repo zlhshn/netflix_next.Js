@@ -1,9 +1,8 @@
-import axios from "axios";
 const API_KEY = process.env.TMDB_KEY;
 
 export const getMovies = async (type) => {
   const URL = `https://api.themoviedb.org/3/movie/${type}?api_key=${API_KEY}`;
-  const res = await fetch(URL, { next: { revalidate: 10 } });
+  const res = await fetch(URL);
   if (!res.ok) {
     throw new Error("Failed to fetch data");
   }
@@ -21,8 +20,7 @@ export const getVideoKey = async (movieId) => {
   }
 
   const data = await res.json();
-
-  return data?.results[0].key;
+  return data.results[0].key;
 };
 
 export const getMovieDetail = async (movieId) => {

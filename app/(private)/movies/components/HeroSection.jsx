@@ -2,11 +2,11 @@ import React from "react";
 import { PlayIcon } from "@heroicons/react/24/solid";
 import VideoSection from "./VideoSection";
 import { getVideoKey } from "@/helpers/movieFunctions";
-import Link from "next/link";
+import Link from "next/navigation";
 
 const HeroSection = async ({ title, overview, id }) => {
   let videoKey = await getVideoKey(id);
-
+console.log(videoKey);
   return (
     <div className="relative h-[50vw]">
       <VideoSection videoKey={videoKey} />
