@@ -44,7 +44,7 @@ const Navbar = () => {
         >
           <div className="relative flex items-center justify-between">
             <Link href="/">
-              <img src="/images/logo.png" className="h-4 lg:h-7" alt="Logo" />
+              <img src="/images/logo.png" className="h-[40px] lg:h-7 w-[148px]" alt="Logo" />
             </Link>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               {currentUser && (
