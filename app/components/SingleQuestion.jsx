@@ -1,8 +1,5 @@
-"use  client";
-
 import React, { useState } from "react";
-import { FaPlus } from "react-icons/fa6";
-
+import { FaPlus, FaTimes } from "react-icons/fa"; // FaTimes ekledim, XIcon yerine kullanılacak
 
 const SingleQuestion = ({ data }) => {
   const [show, setShow] = useState(false);
@@ -14,12 +11,10 @@ const SingleQuestion = ({ data }) => {
         onClick={() => setShow(!show)}
       >
         <p className="text-white text-xl">{data.question}</p>
-        <p className="text-white">
-          {show ? <XIcon/> : <FaPlus/>}
-        </p>
+        <p className="text-white">{show ? <FaTimes /> : <FaPlus />}</p> {/* XIcon yerine FaTimes kullanıldı */}
       </div>
       <div
-        className={`text-white bg-[#414141] text-left transition-all  ease-out ${
+        className={`text-white bg-[#414141] text-left transition-all ease-out ${
           show ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
         } overflow-hidden`}
       >

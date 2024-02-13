@@ -1,6 +1,7 @@
 
 import { questionData } from "@/helpers/data";
-import SingleOuestion from "./SingleOuestion";
+import SingleQuestion from "./SingleQuestion";
+
 
 
 const QuestionComp = () => {
@@ -12,7 +13,7 @@ const QuestionComp = () => {
       </p>
       {questionData.map((item) => (
         <div>
-          <SingleOuestion  data={item} />
+          <SingleQuestion  data={item} />
         </div>
       ))}
     </div>
