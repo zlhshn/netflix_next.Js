@@ -14,12 +14,12 @@ const SingleQuestion = ({ data }) => {
         <p className="text-white">{show ? <FaTimes /> : <FaPlus />}</p> {/* XIcon yerine FaTimes kullanıldı */}
       </div>
       <div
-        className={`text-white bg-[#414141] text-left transition-all ease-out ${
-          show ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
-        } overflow-hidden`}
+       className={`text-white px-6 bg-[#414141] text-left transition-all ease-in-out duration-200 ${
+        show ? "max-h-[200px] opacity-100" : "max-h-0 opacity-0"
+      } overflow-hidden`}
       >
         <p className="text-white">{data.p1}</p>
-        <p className="">{data.p2 || ""}</p>
+        <p className=" pt-4">{data.p2 || ""}</p>
       </div>
     </div>
   );
