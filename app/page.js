@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import QuestionComp from "./components/QuestionComp";
 import { homeData } from "@/helpers/data";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const { currentUser } = useSelector((state) => state.auth);
@@ -13,8 +14,6 @@ export default function Home() {
   useEffect(() => {
     currentUser && router.push("/profile");
   }, [currentUser]);
-
-
 
   return (
     <>
@@ -65,9 +64,10 @@ export default function Home() {
         ))}
       </>
 
-      <div className="bg-black">
+      <div className="bg-black border-b-[10px] border-[#232323]">
         <QuestionComp />
       </div>
+      <Footer />
     </>
   );
 }
