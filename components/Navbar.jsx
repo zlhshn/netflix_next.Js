@@ -36,10 +36,10 @@ const Navbar = () => {
 
   return (
     <>
-      <Disclosure as="nav" className="text-white fixed top-0 z-20 w-full">
+      <Disclosure as="nav" className="bg-transparent bg-black top-0  w-full">
         <div
           className={`px-4 md:px-16 py-6 transition duration-500 ${
-            showBackground ? "bg-zinc-900 bg-opacity-90" : ""
+            showBackground ? "bg-transparent" : ""
           }`}
         >
           <div className="relative flex items-center justify-between">

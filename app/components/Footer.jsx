@@ -1,17 +1,20 @@
 import React from "react";
+import { IoLanguage } from "react-icons/io5";
 
 const Footer = () => {
   return (
     <footer className="bg-black">
-      <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
-        <div className="text-[#B3B3B3] underline">Questions? Contact us.</div>
-        <div className="grid grid-cols-1 gap-8  pt-1 sm:grid-cols-2 lg:grid-cols-4 lg:pt-1  text-[#B3B3B3]  font-[16px]">
+      <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-20 sm:px-6 lg:space-y-1 lg:px-8">
+        <div className="text-[#B3B3B3] underline  font-medium text-[16px]">
+          Questions? Contact us.
+        </div>
+        <div className="grid grid-cols-1 gap-4  pt-1 sm:grid-cols-2 lg:grid-cols-4 lg:pt-1 text-[#B3B3B3] ">
           <div>
             <ul className="mt-6 space-y-4 text-sm ">
               <li>
                 <a
                   href="#"
-                  className=" transition hover:opacity-75 underline text-[#B3B3B3]  font-[16px]"
+                  className=" transition  underline text-[#B3B3B3] font-medium  text-[14px]"
                 >
                   {" "}
                   FAQ{" "}
@@ -21,7 +24,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 transition hover:opacity-75 underline"
+                  className="transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
                   {" "}
                   Investor Relations{" "}
@@ -31,7 +34,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 transition hover:opacity-75 underline"
+                  className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
                   {" "}
                   Terms of Use{" "}
@@ -41,7 +44,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 transition hover:opacity-75 underline"
+                  className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
                   {" "}
                   Contact Us{" "}
@@ -54,8 +57,8 @@ const Footer = () => {
             <ul className="mt-6 space-y-4 text-sm">
               <li>
                 <a
-                  href="#" 
-                  className="text-gray-700 transition hover:opacity-75 underline"
+                  href="#"
+                  className="transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
                   {" "}
                   Help Center{" "}
@@ -65,7 +68,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 transition hover:opacity-75 underline"
+                  className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
                   {" "}
                   Jobs{" "}
@@ -75,7 +78,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 transition hover:opacity-75 underline"
+                  className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
                   {" "}
                   Privacy{" "}
@@ -84,7 +87,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 transition hover:opacity-75 underline"
+                  className="transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
                   {" "}
                   Speed Test{" "}
@@ -98,7 +101,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 transition hover:opacity-75 underline"
+                  className="transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
                   {" "}
                   Account{" "}
@@ -108,7 +111,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 transition hover:opacity-75 underline"
+                  className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
                   {" "}
                   Redeem Gift Cards{" "}
@@ -118,7 +121,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 transition hover:opacity-75 underline"
+                  className="transition underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
                   {" "}
                   Cookie Preferences{" "}
@@ -127,7 +130,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 transition hover:opacity-75 underline"
+                  className="transition underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
                   {" "}
                   Legal Notices{" "}
@@ -141,7 +144,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 transition hover:opacity-75 underline"
+                  className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
                   {" "}
                   Media Center{" "}
@@ -151,7 +154,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 transition hover:opacity-75 underline"
+                  className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
                   {" "}
                   Ways to Watch{" "}
@@ -161,7 +164,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 transition hover:opacity-75 underline"
+                  className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
                   {" "}
                   Corporate Information{" "}
@@ -171,7 +174,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#"
-                  className="text-gray-700 transition hover:opacity-75 underline"
+                  className=" transition underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
                   {" "}
                   Only on Netflix{" "}
@@ -180,8 +183,28 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div>select</div>
-        <div>Netflix Türkiye</div>
+      
+        <div className="inline-block mb-15">
+          <div className="text-[#B3B3B3] bg-black outline-none border border-[#B3B3B3] rounded-md px-2 py-1 flex justify-between items-center ">
+            <IoLanguage color="#fff" />
+            <select
+              name=""
+              id=""
+              className="text-white bg-black border-none outline-none"
+            >
+              <option value="" className="text-black bg-white ">
+                English
+              </option>
+              <option value="" className="text-black  bg-white  ">
+                Turkish
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div className=" transition  text-[#B3B3B3]  font-medium  text-[14px]">
+          Netflix Türkiye
+        </div>
       </div>
     </footer>
   );
