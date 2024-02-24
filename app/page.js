@@ -17,7 +17,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative h-[75%] w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover border-b-[10px] border-[#232323]">
+      <div className="relative h-[70%] w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover border-b-[10px] border-[#232323]">
         <div className="bg-black w-full h-full bg-opacity-50">
           <div className="text-white text-center relative top-2/4 m-auto">
             <h1 className="text-5xl font-[900] text-center mb-3">

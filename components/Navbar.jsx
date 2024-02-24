@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
-import useAuth from "@/hooks/useAuth";
+import useAuthCalls from "@/hooks/useAuth";
 import { useSelector } from "react-redux";
 
 function classNames(...classes) {
@@ -11,12 +11,13 @@ function classNames(...classes) {
 }
 
 const Navbar = () => {
-  const { logOut } = useAuth();
+  const { logOut } = useAuthCalls();
   const { currentUser } = useSelector((state) => state.auth);
   const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
+      // console.log(window.scrollY);
       const TOP_OFFSET = 60;
       if (window.scrollY >= TOP_OFFSET) {
         setShowBackground(true);
@@ -32,19 +33,22 @@ const Navbar = () => {
     };
   }, []);
 
-
+  //* with custom hook
+  // const { currentUser } = useAuthContext();
+  // const currentUser = { displayName: "felix franko" };
+  // const currentUser = false;
 
   return (
     <>
-      <Disclosure as="nav" className="bg-transparent bg-black top-0  w-full">
-        <div
-          className={`px-4 md:px-16 py-6 transition duration-500 ${
-            showBackground ? "bg-transparent" : ""
-          }`}
+      <Disclosure as="nav" className="text-white fixed top-0 z-20 w-full">
+        <div  className="px-4 md:px-16 py-6"
+          // className={`px-4 md:px-16 py-6 transition duration-500 ${
+          //   showBackground ? "bg-zinc-900 bg-opacity-90" : ""
+          // }`}
         >
           <div className="relative flex items-center justify-between">
             <Link href="/">
-              <img src="/images/logo.png" className="h-[40px] lg:h-7 w-[148px]" alt="Logo" />
+              <img src="/images/logo.png" className="h-[40px] w-[142px] " alt="Logo" />
             </Link>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               {currentUser && (
