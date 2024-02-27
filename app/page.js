@@ -44,16 +44,20 @@ export default function Home() {
         {homeData.map((item, i) => (
           <div
             key={i}
-            className="bg-black border-b-[10px] border-[#232323] h-auto md:h-[63%] flex justify-center items-center p-10"
+            className="bg-black border-b-[10px] border-[#232323] h-auto md:h-[64%] flex justify-center items-center p-10"
           >
             <div
-              className={`bg-black flex flex-col justify-center items-center xl:max-w-[66.6%] py-15  m-auto md:max-w-[100%] md:p-[5px] md:${i % 2 !== 0 ? "flex-row-reverse" : "flex-row"}`}
+              className={`bg-black flex flex-col justify-center items-center xl:max-w-[66.6%] py-15 lg:flex-nowrap  m-auto md:max-w-[100%] md:p-[5px] md:${
+                i % 2 !== 0 ? "flex-row-reverse" : "flex-row"
+              }`}
             >
               <div className="lg:text-left flex-1 flex-nowrap text-center p-[30px]">
                 <p className="font-bold text-white lg:text-[48px] text-[32px]">
                   {item.header}
                 </p>
-                <p className="text-white lg:text-[24px] text-[16px]">{item.p}</p>
+                <p className="text-white lg:text-[24px] text-[16px]">
+                  {item.p}
+                </p>
               </div>
               <div className="flex-1">
                 <img className="min-w-[400px]" src={item.image} alt="" />
