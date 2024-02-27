@@ -3,12 +3,12 @@ import { IoLanguage } from "react-icons/io5";
 
 const Footer = () => {
   return (
-    <footer className="bg-black">
-      <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-20 sm:px-6 lg:space-y-1 lg:px-8">
+    <footer className="bg-black ">
+      <div className="mx-auto max-w-screen-xl space-y-8 px-10 py-20 sm:px-6 xl:space-y-1 xl:px-16">
         <div className="text-[#B3B3B3] underline  font-medium text-[16px]">
           Questions? Contact us.
         </div>
-        <div className="grid grid-cols-1 gap-4  pt-1 sm:grid-cols-2 lg:grid-cols-4 lg:pt-1 text-[#B3B3B3] ">
+        <div className="grid grid-cols-2 gap-4  pt-1  lg:grid-cols-4 lg:pt-1 text-[#B3B3B3] ">
           <div>
             <ul className="mt-6 space-y-4 text-sm ">
               <li>
@@ -16,8 +16,7 @@ const Footer = () => {
                   href="#"
                   className=" transition  underline text-[#B3B3B3] font-medium  text-[14px]"
                 >
-                  {" "}
-                  FAQ{" "}
+                  FAQ
                 </a>
               </li>
 
@@ -26,8 +25,7 @@ const Footer = () => {
                   href="#"
                   className="transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
-                  {" "}
-                  Investor Relations{" "}
+                  Investor Relations
                 </a>
               </li>
 
@@ -36,8 +34,7 @@ const Footer = () => {
                   href="#"
                   className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
-                  {" "}
-                  Terms of Use{" "}
+                  Terms of Use
                 </a>
               </li>
 
@@ -46,8 +43,7 @@ const Footer = () => {
                   href="#"
                   className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
-                  {" "}
-                  Contact Us{" "}
+                  Contact Us
                 </a>
               </li>
             </ul>
@@ -60,8 +56,7 @@ const Footer = () => {
                   href="#"
                   className="transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
-                  {" "}
-                  Help Center{" "}
+                  Help Center
                 </a>
               </li>
 
@@ -70,8 +65,7 @@ const Footer = () => {
                   href="#"
                   className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
-                  {" "}
-                  Jobs{" "}
+                  Jobs
                 </a>
               </li>
 
@@ -80,8 +74,7 @@ const Footer = () => {
                   href="#"
                   className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
-                  {" "}
-                  Privacy{" "}
+                  Privacy
                 </a>
               </li>
               <li>
@@ -89,8 +82,7 @@ const Footer = () => {
                   href="#"
                   className="transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
-                  {" "}
-                  Speed Test{" "}
+                  Speed Test
                 </a>
               </li>
             </ul>
@@ -103,8 +95,7 @@ const Footer = () => {
                   href="#"
                   className="transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
-                  {" "}
-                  Account{" "}
+                  Account
                 </a>
               </li>
 
@@ -113,8 +104,7 @@ const Footer = () => {
                   href="#"
                   className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
-                  {" "}
-                  Redeem Gift Cards{" "}
+                  Redeem Gift Cards
                 </a>
               </li>
 
@@ -123,8 +113,7 @@ const Footer = () => {
                   href="#"
                   className="transition underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
-                  {" "}
-                  Cookie Preferences{" "}
+                  Cookie Preferences
                 </a>
               </li>
               <li>
@@ -132,8 +121,7 @@ const Footer = () => {
                   href="#"
                   className="transition underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
-                  {" "}
-                  Legal Notices{" "}
+                  Legal Notices
                 </a>
               </li>
             </ul>
@@ -146,8 +134,7 @@ const Footer = () => {
                   href="#"
                   className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
-                  {" "}
-                  Media Center{" "}
+                  Media Center
                 </a>
               </li>
 
@@ -156,8 +143,7 @@ const Footer = () => {
                   href="#"
                   className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
-                  {" "}
-                  Ways to Watch{" "}
+                  Ways to Watch
                 </a>
               </li>
 
@@ -166,8 +152,7 @@ const Footer = () => {
                   href="#"
                   className=" transition  underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
-                  {" "}
-                  Corporate Information{" "}
+                  Corporate Information
                 </a>
               </li>
 
@@ -176,16 +161,15 @@ const Footer = () => {
                   href="#"
                   className=" transition underline text-[#B3B3B3]  font-medium  text-[14px]"
                 >
-                  {" "}
-                  Only on Netflix{" "}
+                  Only on Netflix
                 </a>
               </li>
             </ul>
           </div>
         </div>
-      
+
         <div className="inline-block mb-15">
-          <div className="text-[#B3B3B3] bg-black outline-none border border-[#B3B3B3] rounded-md px-2 py-1 flex justify-between items-center ">
+          <div className="text-[#B3B3B3] bg-black outline-none border border-[#B3B3B3] rounded-md px-2 py-1 flex justify-between items-center  my-4">
             <IoLanguage color="#fff" />
             <select
               name=""

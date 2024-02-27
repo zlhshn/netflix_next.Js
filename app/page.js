@@ -7,6 +7,7 @@ import { useSelector } from "react-redux";
 import QuestionComp from "./components/QuestionComp";
 import { homeData } from "@/helpers/data";
 import Footer from "./components/Footer";
+import { FaAngleRight } from "react-icons/fa6";
 
 export default function Home() {
   const { currentUser } = useSelector((state) => state.auth);
@@ -17,22 +18,22 @@ export default function Home() {
 
   return (
     <>
-      <div className="relative h-[70%] w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover border-b-[10px] border-[#232323]">
-        <div className="bg-black w-full h-full bg-opacity-50">
-          <div className="text-white text-center relative top-2/4 m-auto">
-            <h1 className="text-5xl font-[900] text-center mb-3">
+      <div className="relative h-[73%] w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover border-b-[10px] border-[#232323]">
+        <div className="bg-black w-full h-full bg-opacity-65">
+          <div className="text-white text-center relative top-64 m-auto">
+            <h1 className="md:text-[48px] text-[32px]  font-[900] text-center mb-3">
               Unlimited movies, TV shows, and more
             </h1>
-            <p className="text-2xl font-[400] ">
+            <p className="md:text-[24px]  text-[18px] font-[400] ">
               Watch anywhere. Cancel anytime.
             </p>
 
             <Link href="/register">
               <button
-                className="btn-danger w-[250px]"
-                // onClick={() => router.push("/register")}
+                className="btn-danger w-[250px] text-[24px] flex m-auto mt-4 items-center gap-3 justify-center"
+                onClick={() => router.push("/register")}
               >
-                Get Started
+                Get Started <FaAngleRight className="mt-1" />
               </button>
             </Link>
           </div>
@@ -43,28 +44,26 @@ export default function Home() {
         {homeData.map((item, i) => (
           <div
             key={i}
-            className="bg-black border-b-[10px] border-[#232323] h-[55%]"
+            className="bg-black border-b-[10px] border-[#232323] h-auto md:h-[63%] flex justify-center items-center p-10"
           >
             <div
-              className={`bg-black flex  py-15 justify-center items-center  px-[72px] max-w-[66.6%] m-auto ${
-                i % 2 !== 0 ? "flex-row-reverse" : ""
-              }`}
+              className={`bg-black flex flex-col justify-center items-center xl:max-w-[66.6%] py-15  m-auto md:max-w-[100%] md:p-[5px] md:${i % 2 !== 0 ? "flex-row-reverse" : "flex-row"}`}
             >
-              <div className="text-left flex-1">
-                <p className="font-bold text-white text-[48px]">
+              <div className="lg:text-left flex-1 flex-nowrap text-center p-[30px]">
+                <p className="font-bold text-white lg:text-[48px] text-[32px]">
                   {item.header}
                 </p>
-                <p className="text-white text-[24px]">{item.p}</p>
+                <p className="text-white lg:text-[24px] text-[16px]">{item.p}</p>
               </div>
               <div className="flex-1">
-                <img src={item.image} alt="" />
+                <img className="min-w-[400px]" src={item.image} alt="" />
               </div>
             </div>
           </div>
         ))}
       </>
 
-      <div className="bg-black border-b-[10px] border-[#232323]">
+      <div className="bg-black border-b-[9px] border-[#232323]">
         <QuestionComp />
       </div>
       <Footer />
