@@ -3,7 +3,7 @@
 This project is a Netflix clone created using Next.js and Vite,utilizing Redux for global state management and Firebase for authentication processes.
 
 ### Project Live
-[LİVE](https://netflix-zlhshn.vercel.app/)
+[LİVE](https://netflix-nextjs-zlhshn.vercel.app/)
 
 ## How does my project look
 ![Netflix](./netflix.gif)
