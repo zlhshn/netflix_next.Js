@@ -2,10 +2,10 @@
 
 import { useEffect } from "react";
 
-//? aplikasyonun herhangi bir yerinde hata fırlatıldığında otomatik error.js dosyası render edilir
+
 export default function Error({ error }) {
   useEffect(() => {
-    // Log the error to an error reporting service
+   
     console.error(error);
   }, [error]);
 

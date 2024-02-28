@@ -70,6 +70,7 @@ const useAuth = () => {
   const logOut = () => {
     signOut(auth);
     toastSuccessNotify("Logged out successfully!");
+    router.push("/");
   };
 
   const userObserver = () => {
@@ -93,7 +94,7 @@ const useAuth = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
-        console.log(result);
+    
         router.push("/profile");
         toastSuccessNotify("Logged in successfully!");
       })

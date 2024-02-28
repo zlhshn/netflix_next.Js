@@ -20,7 +20,7 @@ const SingleQuestion = ({ data }) => {
             <HiOutlinePlus className="text-[40px]" />
           )}
         </p>{" "}
-        {/* XIcon yerine FaTimes kullanıldı */}
+     
       </div>
       <div
         className={`text-white  bg-[#2D2D2D] text-left transition-all ease-in-out duration-200 ${

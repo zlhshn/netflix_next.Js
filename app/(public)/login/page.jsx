@@ -23,9 +23,9 @@ const Login = () => {
 
   return (
     <div className="relative h-screen w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
-      <div className="bg-black w-full h-full lg:bg-opacity-50">
+      <div className="bg-black w-full h-full md:bg-opacity-50">
         <div className="flex justify-center">
-          <div className="bg-black bg-opacity-70 px-16 py-16 self-center relative top-28 lg:w-2/5 lg:max-w-md rounded-md w-full">
+          <div className="bg-black bg-opacity-70 px-16 py-16 self-center relative top-28 lg:w-2/5 md:max-w-md rounded-md w-full">
             <form onSubmit={handleSubmit}>
               <h2 className="text-red-main text-2xl font-[500] text-center tracking-[0.1em] mb-3">
                 Sign In
@@ -66,11 +66,11 @@ const Login = () => {
                   Sign Up
                 </Link>
               </div>
-              <button className="btn-danger" type="submit">
-                Login
+              <button className="btn-danger h-[40px] text-[16px]" type="submit">
+                Sign In
               </button>
               <button
-                className="flex justify-between text-center items-center btn-danger"
+                className="flex justify-center gap-2 text-center items-center btn-danger h-[40px] text-[16px]"
                 type="button"
                 onClick={signUpProvider}
               >

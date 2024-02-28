@@ -77,11 +77,11 @@ const Register = () => {
                 />
                 <label htmlFor="floating_password">Password</label>
               </div>
-              <button className="btn-danger" type="submit">
+              <button className="btn-danger h-[40px] text-[16px]" type="submit">
                 Register
               </button>
               <button
-                className="flex justify-between text-center items-center btn-danger"
+                className="flex justify-center gap-2 text-center items-center focus:outline-none btn-danger outline-none h-[40px] text-[16px]"
                 type="button"
                 onClick={()=>signUpProvider}
               >

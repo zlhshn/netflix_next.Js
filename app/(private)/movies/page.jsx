@@ -10,7 +10,7 @@ export const metadata = {
 
 const Main = async () => {
   const movies = await getMovies("now_playing");
-  // console.log(movies);
+
 
   return (
     <>

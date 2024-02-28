@@ -30,10 +30,10 @@ export default function Home() {
 
             <Link href="/register">
               <button
-                className="btn-danger w-[250px] text-[24px] flex m-auto mt-4 items-center gap-3 justify-center"
+                className="btn-danger w-[250px] text-[24px] flex m-auto mt-4 items-center gap-3 justify-center py-[12px] px-[3px]"
                 onClick={() => router.push("/register")}
               >
-                Get Started <FaAngleRight className="mt-1" />
+                Get Started <FaAngleRight className="mt-1 " />
               </button>
             </Link>
           </div>
@@ -47,8 +47,8 @@ export default function Home() {
             className="bg-black border-b-[10px] border-[#232323] h-auto md:h-[64%] flex justify-center items-center p-10"
           >
             <div
-              className={`bg-black flex flex-col justify-center items-center xl:max-w-[66.6%] py-15 lg:flex-nowrap  m-auto md:max-w-[100%] md:p-[5px] md:${
-                i % 2 !== 0 ? "flex-row-reverse" : "flex-row"
+              className={`bg-black flex flex-col justify-center items-center xl:max-w-[66.6%] py-15 lg:flex-nowrap  m-auto md:max-w-[100%] md:p-[5px] ${
+                i % 2 !== 0 ? "md:flex-row-reverse" : "md:flex-row"
               }`}
             >
               <div className="lg:text-left flex-1 flex-nowrap text-center p-[30px]">

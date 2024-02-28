@@ -5,11 +5,14 @@ import "react-toastify/dist/ReactToastify.css";
 import { Providers } from "@/lib/Providers";
 import { ToastContainer } from "react-toastify";
 
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "NetFlix",
   description: "a movie platform",
+
+ 
 };
 
 export default function RootLayout({ children }) {
