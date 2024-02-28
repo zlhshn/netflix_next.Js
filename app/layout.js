@@ -9,7 +9,7 @@ import { ToastContainer } from "react-toastify";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "NetFlix",
+  title: "Netflix",
   description: "a movie platform",
 
  
