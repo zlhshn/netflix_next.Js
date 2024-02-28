@@ -6,7 +6,7 @@ This project is a Netflix clone created using Next.js and Vite,utilizing Redux f
 [LİVE]()
 
 ## How does my project look
-
+![Netflix](./netflix.gif)
 
 ## Tech/framework used
 

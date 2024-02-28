@@ -24,6 +24,10 @@ const Register = () => {
     createUser(email, password, displayName);
   };
 
+  const handleProviderLogin = () => {
+    signUpProvider();
+  };
+
   return (
     <div className="relative h-screen w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-center bg-fixed bg-cover">
       <div className="bg-black w-full h-full lg:bg-opacity-50">
@@ -83,7 +87,7 @@ const Register = () => {
               <button
                 className="flex justify-center gap-2 text-center items-center focus:outline-none btn-danger outline-none h-[40px] text-[16px]"
                 type="button"
-                onClick={()=>signUpProvider}
+                onClick={handleProviderLogin}
               >
                 Continue with Google
                 <GoogleIcon color="currentColor" />
