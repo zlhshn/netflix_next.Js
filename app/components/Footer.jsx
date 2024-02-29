@@ -179,9 +179,9 @@ const Footer = () => {
               <option value="" className="text-black bg-white ">
                 English
               </option>
-              <option value="" className="text-black  bg-white  ">
+              {/* <option value="" className="text-black  bg-white  ">
                 Turkish
-              </option>
+              </option> */}
             </select>
           </div>
         </div>
