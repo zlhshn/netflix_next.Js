@@ -1,5 +1,5 @@
 
-### NetFlix Project 
+### Netflix Project 
 This project is a Netflix clone created using Next.js and Vite,utilizing Redux for global state management and Firebase for authentication processes.
 
 ### Project Live
